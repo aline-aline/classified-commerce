@@ -1,15 +1,6 @@
-<!-- Page Content -->
-<div id="page-wrapper">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2><%= current_admin.email %></h2>
-				<h1 class="page-header">Blank</h1>
-			</div>
-			<!-- /.col-lg-12 -->
-		</div>
-		<!-- /.row -->
+<% if notice %>
+	<div class="alert alert-success alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+		<%= notice %>
 	</div>
-	<!-- /.container-fluid -->
-</div>
-<!-- /#page-wrapper -->
+<% end %>
