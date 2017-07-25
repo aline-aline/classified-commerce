@@ -5032,3 +5032,2668 @@ Processing by Backoffice::DashboardController#index as HTML
 Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:36:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 1196ms (Views: 1125.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:36:24 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:36:38 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 20:43:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (7.0ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.6ms)
+  Rendered layouts/site_shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 496ms (Views: 397.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:45:56 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 139ms (Views: 120.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-07-17 20:46:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/backoffice/dashboard/" for 127.0.0.1 at 2017-07-17 20:46:40 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/dashboard/index" for 127.0.0.1 at 2017-07-17 20:46:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/dashboard/index"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-17 20:46:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:47:03 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 87.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 20:47:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 789ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 20:47:26 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (1.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2017-07-17 20:47:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 20:47:39 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (1.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:49:34 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 20:55:39 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2017-07-17 20:55:42 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jQ8xookLl8TWB+edq7JC5Q94A+888NbuymG5olqaxIQLJnNBMoc6sc1O1EyybvB3tZfvMNWJYk6m6qEJMOGntg=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 20:55:42 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (1.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 20:55:58 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.4ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (243.1ms)
+Completed 200 OK in 339ms (Views: 303.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 21:36:57 -0300
+
+SyntaxError - syntax error, unexpected tSYMBEG
+  def :layout_by_resource
+       ^
+/home/aline/Workspace/classified-commerce/app/controllers/application_controller.rb:15: syntax error, unexpected keyword_end, expecting end-of-input:
+  app/controllers/application_controller.rb:8:in `'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `block in load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:661:in `new_constants_in'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:475:in `load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:374:in `block in require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `block in load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:357:in `require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:510:in `load_missing_constant'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:202:in `const_missing'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+  activesupport (5.1.2) lib/active_support/core_ext/string/inflections.rb:66:in `constantize'
+  devise (4.3.0) app/controllers/devise_controller.rb:2:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `block in load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:661:in `new_constants_in'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:475:in `load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:374:in `block in require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `block in load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:357:in `require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:510:in `load_missing_constant'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:202:in `const_missing'
+  devise (4.3.0) app/controllers/devise/sessions_controller.rb:1:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `block in load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:661:in `new_constants_in'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:475:in `load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:374:in `block in require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `block in load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:357:in `require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:510:in `load_missing_constant'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:202:in `const_missing'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:582:in `get'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:613:in `constantize'
+  actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+  actionpack (5.1.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/b841592dea941d8a/variables" for 127.0.0.1 at 2017-07-17 21:36:57 -0300
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 21:38:07 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (0.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.5ms)
+Completed 200 OK in 86ms (Views: 73.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 21:52:50 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.2ms)
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 21:57:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (0.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.8ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2017-07-17 21:58:03 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ufu/+t/dLK3romUf84spLI8NucKSfqELNF0QDNOubg0HdVqCokFnHqDKOXLjWSoxW1U2Y8WomNKoQYhNQfUXAA==", "admin"=>{"email"=>"aline@sapo.pt", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aline@sapo.pt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (54.1ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-07-18 00:58:04.019522"], ["last_sign_in_at", "2017-07-13 01:56:01.292470"], ["sign_in_count", 3], ["updated_at", "2017-07-18 00:58:04.020250"], ["id", 1]]
+  [1m[35m (206.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 535ms (ActiveRecord: 261.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 21:58:04 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (6.1ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.1ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 21:58:17 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2017-07-17 21:58:22 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vFfsAObPOfA7GxDSt98wW/Q9hTtXwLXwYxv/s7Yn3kErLku74jD+JHO944J77w4MyiB0nzzlMkCRzrAjnQShEw=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 21:58:22 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (1.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:04:06 -0300
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-17 22:04:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.3ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2017-07-17 22:04:15 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yeYE/simH3RE+iJMEhWpZ9/EqVA15jNYzPRLnSmfj1s8fO+PacA/PanPkcxFG/uP/mK7Lt8wCwZybxvNYW/xmw==", "admin"=>{"email"=>"aline@sapo.pt", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aline@sapo.pt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-07-18 01:04:15.944295"], ["last_sign_in_at", "2017-07-18 00:58:04.019522"], ["sign_in_count", 4], ["updated_at", "2017-07-18 01:04:15.944911"], ["id", 1]]
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 259ms (ActiveRecord: 104.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:04:16 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:08:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (2.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 458ms (Views: 405.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:09:44 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-07-17 22:10:37 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (9.0ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.8ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 271ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=categ" for 127.0.0.1 at 2017-07-17 22:10:53 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"categ"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=catego" for 127.0.0.1 at 2017-07-17 22:10:53 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"catego"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:12:56 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.6ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.2ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^:
+  app/views/layouts/backoffice_shared/_navigation.html.erb:66:in `'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `module_eval'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `compile'
+  actionview (5.1.2) lib/action_view/template.rb:257:in `block (2 levels) in compile!'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:348:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:256:in `block in compile!'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `synchronize'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `compile!'
+  actionview (5.1.2) lib/action_view/template.rb:156:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:342:in `block in render_partial'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:331:in `render_partial'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:21:in `render'
+  actionview (5.1.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/layouts/backoffice.html.erb:28:in `_app_views_layouts_backoffice_html_erb__3344452892677234042_70110184093060'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/3e930cd241c2f46d/variables" for 127.0.0.1 at 2017-07-17 22:12:57 -0300
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:13:15 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 87.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:13:24 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  Rendering backoffice/categories/index.html.erb within layouts/application
+  Rendered backoffice/categories/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:13:24 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  Rendering backoffice/categories/index.html.erb within layouts/application
+  Rendered backoffice/categories/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:14:13 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 125ms (Views: 109.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:15:31 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-07-17 22:15:53 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (9.9ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=bak" for 127.0.0.1 at 2017-07-17 22:16:01 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"bak"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=bak" for 127.0.0.1 at 2017-07-17 22:16:01 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"bak"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=ba" for 127.0.0.1 at 2017-07-17 22:16:02 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"ba"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=back" for 127.0.0.1 at 2017-07-17 22:16:02 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"back"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=dash" for 127.0.0.1 at 2017-07-17 22:16:05 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"dash"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:17:32 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:17:40 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:17:41 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:17:44 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:17:57 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 86ms (Views: 76.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-07-17 22:24:39 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:24:41 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (28.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined method `model' for nil:NilClass:
+  app/views/backoffice/categories/index.html.erb:13:in `_app_views_backoffice_categories_index_html_erb__792180965201713655_70110183840920'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/9455853131e14cf3/variables" for 127.0.0.1 at 2017-07-17 22:24:41 -0300
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:25:10 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/backoffice/categories/index.html.erb:18:in `_app_views_backoffice_categories_index_html_erb__792180965201713655_70110107285080'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/cfed4c5508747af1/variables" for 127.0.0.1 at 2017-07-17 22:25:10 -0300
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:25:27 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (388.7ms)
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `category' for #<#<Class:0x007f8798c3eb38>:0x000000042f6120>:
+  app/views/backoffice/categories/index.html.erb:19:in `_app_views_backoffice_categories_index_html_erb__792180965201713655_35073240'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/fe06e646b1ab7169/variables" for 127.0.0.1 at 2017-07-17 22:25:28 -0300
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:25:47 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (311.7ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 0.3ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `category' for #<#<Class:0x007f8798c3eb38>:0x007f8790161ee8>:
+  app/views/backoffice/categories/index.html.erb:22:in `_app_views_backoffice_categories_index_html_erb__792180965201713655_70110107342040'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/f78e0db0f0c73fb1/variables" for 127.0.0.1 at 2017-07-17 22:25:47 -0300
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:26:16 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:29:06 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 152ms (Views: 146.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:31:59 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (6.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 109ms (Views: 74.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:33:47 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 101ms (Views: 98.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:34:36 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 96ms (Views: 90.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:35:20 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:35:21 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 112ms (Views: 109.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:38:27 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:38:56 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (3.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.6ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:39:32 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 94ms (Views: 89.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/categories/index" for 127.0.0.1 at 2017-07-17 22:40:11 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-18 20:54:15 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActionController::RoutingError - uninitialized constant ApplicationController::Base:
+  app/controllers/backoffice_controller.rb:1:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  app/controllers/backoffice/categories_controller.rb:1:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+  actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/e3efd28cdc6db54d/variables" for 127.0.0.1 at 2017-07-18 20:54:16 -0300
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-18 20:59:08 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (15.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 1329ms (Views: 1240.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 21:19:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (5.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 1231ms (Views: 1177.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-07-19 21:20:09 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [40 times] (31.6ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (35.3ms)
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 249ms (Views: 186.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=cate" for 127.0.0.1 at 2017-07-19 21:20:17 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"cate"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 21:52:09 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 96.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 21:53:41 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (3.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 102ms (Views: 98.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 21:59:58 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:00:29 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (10.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:00:39 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (1.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:02:54 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:02:57 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:03:34 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:03:37 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (5.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/templates/sb-admin/pages/form.html" for 127.0.0.1 at 2017-07-19 22:06:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/templates/sb-admin/pages/form.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/templates/sb-admin/pages/forms.html" for 127.0.0.1 at 2017-07-19 22:06:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/templates/sb-admin/pages/forms.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/templates/sb-admin/pages/forms.html" for 127.0.0.1 at 2017-07-19 22:11:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/templates/sb-admin/pages/forms.html"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/backoffice/dashboard/" for 127.0.0.1 at 2017-07-19 22:12:01 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 110ms (Views: 70.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:12:03 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (3.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:12:05 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:15:26 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 88ms (Views: 82.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:15:42 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 85ms (Views: 82.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:23:23 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.8ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+=( f.text_field, :description, class: "form-control", placeh
+                              ^
+/home/aline/Workspace/classified-commerce/app/views/backoffice/categories/new.html.erb:17: syntax error, unexpected ',', expecting ')'
+iption, class: "form-control", placeholder: "e.g. PS4/Games"
+                              ^:
+  app/views/backoffice/categories/new.html.erb:17:in `'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `module_eval'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `compile'
+  actionview (5.1.2) lib/action_view/template.rb:257:in `block (2 levels) in compile!'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:348:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:256:in `block in compile!'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `synchronize'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `compile!'
+  actionview (5.1.2) lib/action_view/template.rb:156:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/a9902f65cddaafe9/variables" for 127.0.0.1 at 2017-07-19 22:23:24 -0300
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:24:25 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (235.4ms)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.5ms)
+
+
+
+ActionView::Template::Error - undefined method `categories_path' for #<#<Class:0x007f18b54fd7e0>:0x007f18b5cb67e8>:
+  actionpack (5.1.2) lib/action_dispatch/routing/polymorphic_routes.rb:230:in `polymorphic_method'
+  actionpack (5.1.2) lib/action_dispatch/routing/polymorphic_routes.rb:138:in `polymorphic_path'
+  actionview (5.1.2) lib/action_view/helpers/form_helper.rb:472:in `apply_form_for_options!'
+  actionview (5.1.2) lib/action_view/helpers/form_helper.rb:440:in `form_for'
+  app/views/backoffice/categories/new.html.erb:14:in `_app_views_backoffice_categories_new_html_erb__3770469367329753553_69872052975940'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/1731d1c47f17cc78/variables" for 127.0.0.1 at 2017-07-19 22:24:25 -0300
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:29:00 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting ']'
+m_for([:backoffice, @category)] do |f| @output_buffer.safe_a
+                              ^
+/home/aline/Workspace/classified-commerce/app/views/backoffice/categories/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^:
+  app/views/backoffice/categories/new.html.erb:14:in `'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `module_eval'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `compile'
+  actionview (5.1.2) lib/action_view/template.rb:257:in `block (2 levels) in compile!'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:348:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:256:in `block in compile!'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `synchronize'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `compile!'
+  actionview (5.1.2) lib/action_view/template.rb:156:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/abb6e6ea78ac5f10/variables" for 127.0.0.1 at 2017-07-19 22:29:00 -0300
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:30:23 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (35.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 93.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-19 22:45:25 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (2.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 94ms (Views: 73.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:46:12 -0300
+Processing by Backoffice::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3jcfjtIspAlQujwTMl07qcQjiIOftC6k0W0CCHSyQEkeT1bcdKxSJyMPQfr2AOsQEt1w1CHy/PeUyQ3Lyb10Mw==", "category"=>{"description"=>"Games"}}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Games"], ["created_at", "2017-07-20 01:46:12.154771"], ["updated_at", "2017-07-20 01:46:12.154771"]]
+  [1m[35m (120.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/backoffice/categories
+Completed 302 Found in 129ms (ActiveRecord: 121.5ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:46:12 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-19 22:50:09 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (3.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:00:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (6.7ms)
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:00:36 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 1364ms (Views: 1322.0ms | ActiveRecord: 1.3ms)
+
+
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 218ms (Views: 215.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:00:39 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 96.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:02:14 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (21.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - First argument in form cannot contain nil or be empty:
+  actionview (5.1.2) lib/action_view/helpers/form_helper.rb:438:in `form_for'
+  app/views/backoffice/categories/edit.html.erb:14:in `_app_views_backoffice_categories_edit_html_erb___2963827948457132078_69962267315540'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/655a9f0612538113/variables" for 127.0.0.1 at 2017-07-24 21:02:15 -0300
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:04:31 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (31.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 140ms (Views: 101.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:26:56 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (7.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 516ms (Views: 454.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-24 21:26:59 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (24.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (4.2ms)
+Completed 200 OK in 93ms (Views: 89.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:27:01 -0300
+Processing by Backoffice::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BxuYDdGb2acHElUOBj4hhETk9FuGaEssyI7WpSp4YfxyYhXMsmQCwaOm32Ko4AqpRoJ9dUZuPatCNBmw1fTKKA==", "category"=>{"description"=>""}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (1.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1014ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:29:11 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (4.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-24 21:29:14 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (1.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:29:16 -0300
+Processing by Backoffice::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+RrTBLLcRmMmAnoEMMENV4NaaVeXA7+8IfmKre3tVE6neaNcTSqfygsg4S+HS8YXGvgi55aeHl6PSk/SDsehQ==", "category"=>{"description"=>""}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (1.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2017-07-24 21:29:18 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 81ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:29:19 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (11.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:29:23 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (1.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 87ms (Views: 72.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/backoffice/categories/1" for 127.0.0.1 at 2017-07-24 21:29:24 -0300
+Processing by Backoffice::CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTdpy9PZzIQXS05ti7ZMDWH2br54RbDa1FnliliDL4LcDRVzUwg5pX+DD0SYs68yTtIZiPvlegNfE5ou8xF6tQ==", "category"=>{"description"=>"Animais e acessórios"}, "id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/backoffice/categories
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-24 21:29:24 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:29:28 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (1.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 79ms (Views: 68.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/backoffice/categories/1" for 127.0.0.1 at 2017-07-24 21:29:32 -0300
+Processing by Backoffice::CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"54ZaHy1y7MQTdEu8me/lCWr2D+mZVbN/smTadd4V34L+vCanraMZ5Xu8CpWK6gY2RdJ43xr1eaY5LqXRdYeKtQ==", "category"=>{"description"=>""}, "id"=>"1"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (3.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 118ms (Views: 109.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:51:00 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (26.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - Missing partial backoffice/category/shared/_form with {:locale=>[:"pt-BR"], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aline/Workspace/classified-commerce/app/views"
+  * "/home/aline/.rvm/gems/ruby-2.4.1/gems/devise-i18n-1.1.2/app/views"
+  * "/home/aline/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views"
+:
+  actionview (5.1.2) lib/action_view/path_set.rb:46:in `find'
+  actionview (5.1.2) lib/action_view/lookup_context.rb:116:in `find'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:421:in `find_template'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:416:in `find_partial'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:297:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:21:in `render'
+  actionview (5.1.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/backoffice/categories/edit.html.erb:1:in `_app_views_backoffice_categories_edit_html_erb__630314144765473383_70239407993420'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/4780c50fb5e4612c/variables" for 127.0.0.1 at 2017-07-24 21:51:00 -0300
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:52:55 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (1.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+
+ActionView::Template::Error - Missing partial backoffice/categories/shared/_form with {:locale=>[:"pt-BR"], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/aline/Workspace/classified-commerce/app/views"
+  * "/home/aline/.rvm/gems/ruby-2.4.1/gems/devise-i18n-1.1.2/app/views"
+  * "/home/aline/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views"
+:
+  actionview (5.1.2) lib/action_view/path_set.rb:46:in `find'
+  actionview (5.1.2) lib/action_view/lookup_context.rb:116:in `find'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:421:in `find_template'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:416:in `find_partial'
+  actionview (5.1.2) lib/action_view/renderer/partial_renderer.rb:297:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:21:in `render'
+  actionview (5.1.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/backoffice/categories/edit.html.erb:1:in `_app_views_backoffice_categories_edit_html_erb__630314144765473383_70239396204640'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/b34eb36645eecd7d/variables" for 127.0.0.1 at 2017-07-24 21:52:55 -0300
+Started GET "/backoffice/categories/1/edit" for 127.0.0.1 at 2017-07-24 21:54:32 -0300
+Processing by Backoffice::CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/edit.html.erb within layouts/backoffice
+  Rendered backoffice/categories/shared/_form.html.erb (1.1ms)
+  Rendered backoffice/categories/edit.html.erb within layouts/backoffice (2.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 0.6ms)
+
+
