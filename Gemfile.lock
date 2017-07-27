@@ -71,6 +71,8 @@ GEM
     erubi (1.6.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.8.4)
+      i18n (~> 0.5)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
@@ -124,7 +126,7 @@ GEM
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
     rails-assets-jquery (3.2.1)
-    rails-assets-notify (0.0.1)
+    rails-assets-notifyjs (0.4.2)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -204,6 +206,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-i18n
+  faker
   foreman
   jbuilder (~> 2.5)
   jquery-rails
@@ -211,7 +214,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.1)
   rails-assets-bootstrap (= 3.3.7)!
-  rails-assets-notify!
+  rails-assets-notifyjs!
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
@@ -224,4 +227,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.1
+   1.15.3
