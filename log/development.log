@@ -13839,3 +13839,439 @@ Processing by Backoffice::AdminsController#index as HTML
 Completed 200 OK in 196ms (Views: 191.8ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (172.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateMembers (20170702220307)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_email" ON "members" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_reset_password_token" ON "members" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220307"]]
+  [1m[35m (131.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateAdmins (20170702220332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220332"]]
+  [1m[35m (139.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20170702221652)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(60), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702221652"]]
+  [1m[35m (153.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAds (20170703235226)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "member_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_93b599c7ff"
+FOREIGN KEY ("member_id")
+  REFERENCES "members" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_member_id" ON "ads" ("member_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_category_id" ON "ads" ("category_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170703235226"]]
+  [1m[35m (171.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameAndRoleToAdmin (20170728000011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "role" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170728000011"]]
+  [1m[35m (108.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-28 00:34:40.249800"], ["updated_at", "2017-07-28 00:34:40.249800"]]
+  [1m[35m (113.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Animais e acessórios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Animais e acessórios"], ["created_at", "2017-07-28 00:34:40.392446"], ["updated_at", "2017-07-28 00:34:40.392446"]]
+  [1m[35m (150.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Esportes"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Esportes"], ["created_at", "2017-07-28 00:34:40.548687"], ["updated_at", "2017-07-28 00:34:40.548687"]]
+  [1m[35m (125.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Para a sua casa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Para a sua casa"], ["created_at", "2017-07-28 00:34:40.680082"], ["updated_at", "2017-07-28 00:34:40.680082"]]
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Eletrônicos e celulares"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Eletrônicos e celulares"], ["created_at", "2017-07-28 00:34:40.790701"], ["updated_at", "2017-07-28 00:34:40.790701"]]
+  [1m[35m (122.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Música e hobbies"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Música e hobbies"], ["created_at", "2017-07-28 00:34:40.922494"], ["updated_at", "2017-07-28 00:34:40.922494"]]
+  [1m[35m (118.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Bebês e crianças"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Bebês e crianças"], ["created_at", "2017-07-28 00:34:41.047974"], ["updated_at", "2017-07-28 00:34:41.047974"]]
+  [1m[35m (102.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Moda e beleza"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Moda e beleza"], ["created_at", "2017-07-28 00:34:41.156246"], ["updated_at", "2017-07-28 00:34:41.156246"]]
+  [1m[35m (106.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Veículos e barcos"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Veículos e barcos"], ["created_at", "2017-07-28 00:34:41.266846"], ["updated_at", "2017-07-28 00:34:41.266846"]]
+  [1m[35m (108.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Imóveis"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Imóveis"], ["created_at", "2017-07-28 00:34:41.380082"], ["updated_at", "2017-07-28 00:34:41.380082"]]
+  [1m[35m (92.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Empregos e negócios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Empregos e negócios"], ["created_at", "2017-07-28 00:34:41.478025"], ["updated_at", "2017-07-28 00:34:41.478025"]]
+  [1m[35m (85.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$X5nYw5bQtgiHSyd/y89KK.aHPpnaSR9x.s9ET9.FhkhheR2cNh1OO"], ["created_at", "2017-07-28 00:34:41.784171"], ["updated_at", "2017-07-28 00:34:41.784171"], ["name", "Administrador Geral"], ["role", 0]]
+  [1m[35m (87.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "christian@bahringer.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "christian@bahringer.name"], ["encrypted_password", "$2a$11$HOHZEndGWzzxowEJF8Ableg7YMVG.A16xuGO44nvEtXeXAuPRmK4q"], ["created_at", "2017-07-28 00:34:43.101167"], ["updated_at", "2017-07-28 00:34:43.101167"], ["name", "Sr. Theo Martins"], ["role", 0]]
+  [1m[35m (248.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "shayne.klein@connelly.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "shayne.klein@connelly.co"], ["encrypted_password", "$2a$11$EjGDj2pRm5Djc9lXRaVoL.NP/Xkz/YYb0FqnxKGwpOqy5SdE5rwUq"], ["created_at", "2017-07-28 00:34:43.507632"], ["updated_at", "2017-07-28 00:34:43.507632"], ["name", "Karla Rocha"], ["role", 0]]
+  [1m[35m (175.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "zoey_hirthe@beiergaylord.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "zoey_hirthe@beiergaylord.co"], ["encrypted_password", "$2a$11$MU0bJdMrr9l8UdJli9nRBuPJUtd7Y7OmKAnxVRwuhL4TF8tL1hRSy"], ["created_at", "2017-07-28 00:34:43.833530"], ["updated_at", "2017-07-28 00:34:43.833530"], ["name", "Isadora Cavalcanti"], ["role", 1]]
+  [1m[35m (127.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "palma@stroman.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "palma@stroman.biz"], ["encrypted_password", "$2a$11$Q0P.Nfz3u1Z1UgdMf9EWpem0ndY7cATWRuzEky/d7tkhBzf1/5btu"], ["created_at", "2017-07-28 00:34:44.114753"], ["updated_at", "2017-07-28 00:34:44.114753"], ["name", "Isabela Nascimento"], ["role", 1]]
+  [1m[35m (120.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "dina@okuneva.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "dina@okuneva.com"], ["encrypted_password", "$2a$11$HRgbmn75BiN2TxSuSR8cae9pb6o1oqa2kP49D5RFUhnDNg7M1LNzi"], ["created_at", "2017-07-28 00:34:44.391510"], ["updated_at", "2017-07-28 00:34:44.391510"], ["name", "Lorena Porto"], ["role", 1]]
+  [1m[35m (186.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "anabelle@riceschneider.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "anabelle@riceschneider.info"], ["encrypted_password", "$2a$11$LFUv.5Sgc9UMJvwmOY0n6OBFAi7PcJ8bpnSja4r2CGFKI3bgHMVeK"], ["created_at", "2017-07-28 00:34:44.728672"], ["updated_at", "2017-07-28 00:34:44.728672"], ["name", "Hugo Macedo"], ["role", 0]]
+  [1m[35m (105.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "talia_beier@adams.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "talia_beier@adams.io"], ["encrypted_password", "$2a$11$WdbTjNtaRBJHVgm218B0J.kVWyjtzJFbmHLDkmbAb5BrwsDmrSpFW"], ["created_at", "2017-07-28 00:34:44.984137"], ["updated_at", "2017-07-28 00:34:44.984137"], ["name", "Esther Rezende"], ["role", 0]]
+  [1m[35m (108.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "payton@beahan.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "payton@beahan.com"], ["encrypted_password", "$2a$11$akTunfmoPDscaBr6wP9Z1uZ.c8CIPJwssL/nvkpHs5Il5.hKNL/KS"], ["created_at", "2017-07-28 00:34:45.241800"], ["updated_at", "2017-07-28 00:34:45.241800"], ["name", "Lívia Nunes"], ["role", 1]]
+  [1m[35m (104.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "kyler@smithpfannerstill.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "kyler@smithpfannerstill.co"], ["encrypted_password", "$2a$11$zVmmJEitEOFEfBo4uPWORuHCGcvT1HQ37cFk/enql4xmFYcdMOATS"], ["created_at", "2017-07-28 00:34:45.495166"], ["updated_at", "2017-07-28 00:34:45.495166"], ["name", "Nataniel Porto"], ["role", 1]]
+  [1m[35m (126.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "luna@gradydubuque.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "luna@gradydubuque.org"], ["encrypted_password", "$2a$11$gJRh4gY3F/MIxWEdq44/.OHkKu2wMlmdcuu7pCltuf837vj9xWDMq"], ["created_at", "2017-07-28 00:34:45.767882"], ["updated_at", "2017-07-28 00:34:45.767882"], ["name", "Ladislau Muniz"], ["role", 0]]
+  [1m[35m (88.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:35:01 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 59ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2017-07-27 21:35:02 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/shared/_links.html.erb (0.3ms)
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (23.0ms)
+Completed 200 OK in 507ms (Views: 488.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2017-07-27 21:35:14 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JD009goe1QlDrX0acP1sSZxYefOJn1SdbEWHwh/Q58Xd3kAyJBeM5YCA9cmjkvmDNU1GrPZwY1FpezsQccz/6A==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-07-28 00:35:14.948676"], ["last_sign_in_at", "2017-07-28 00:35:14.948676"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2017-07-28 00:35:14.949795"], ["id", 1]]
+  [1m[35m (116.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 379ms (ActiveRecord: 118.1ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:35:15 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (5.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:36:17 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (4.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:37:37 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (4.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 85.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:39:09 -0300
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/models/admin.rb:14:in `'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `block in load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:661:in `new_constants_in'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:475:in `load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:374:in `block in require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `block in load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:357:in `require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:510:in `load_missing_constant'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:202:in `const_missing'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:582:in `get'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:613:in `constantize'
+  devise (4.3.0) lib/devise.rb:313:in `get'
+  devise (4.3.0) lib/devise/mapping.rb:81:in `to'
+  devise (4.3.0) lib/devise/mapping.rb:76:in `modules'
+  devise (4.3.0) lib/devise/mapping.rb:93:in `routes'
+  devise (4.3.0) lib/devise/mapping.rb:160:in `default_used_route'
+  devise (4.3.0) lib/devise/mapping.rb:70:in `initialize'
+  devise (4.3.0) lib/devise.rb:343:in `new'
+  devise (4.3.0) lib/devise.rb:343:in `add_mapping'
+  devise (4.3.0) lib/devise/rails/routes.rb:241:in `block in devise_for'
+  devise (4.3.0) lib/devise/rails/routes.rb:240:in `each'
+  devise (4.3.0) lib/devise/rails/routes.rb:240:in `devise_for'
+  config/routes.rb:16:in `block in <top (required)>'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:424:in `instance_exec'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:424:in `eval_block'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:406:in `draw'
+  config/routes.rb:1:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:286:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:286:in `block in load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:258:in `load_dependency'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:286:in `load'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:55:in `block in load_paths'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:55:in `each'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:55:in `load_paths'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:18:in `reload!'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:41:in `block in updater'
+  activesupport (5.1.2) lib/active_support/file_update_checker.rb:81:in `execute'
+  railties (5.1.2) lib/rails/application/routes_reloader.rb:25:in `execute'
+  railties (5.1.2) lib/rails/application/finisher.rb:141:in `block (2 levels) in <module:Finisher>'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:413:in `instance_exec'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:601:in `block (2 levels) in default_terminator'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:600:in `catch'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:600:in `block in default_terminator'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:198:in `block in halting'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:507:in `each'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:507:in `invoke_before'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:130:in `run_callbacks'
+  activesupport (5.1.2) lib/active_support/execution_wrapper.rb:108:in `run!'
+  activesupport (5.1.2) lib/active_support/reloader.rb:113:in `run!'
+  activesupport (5.1.2) lib/active_support/execution_wrapper.rb:70:in `block in run!'
+  activesupport (5.1.2) lib/active_support/execution_wrapper.rb:67:in `tap'
+  activesupport (5.1.2) lib/active_support/execution_wrapper.rb:67:in `run!'
+  activesupport (5.1.2) lib/active_support/reloader.rb:59:in `run!'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:10:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/de6907f3b572f0e9/variables" for 127.0.0.1 at 2017-07-27 21:39:09 -0300
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 21:39:36 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (6.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 109ms (Views: 88.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-07-27 22:01:30 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (6.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 175ms (Views: 136.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-27 22:01:35 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (5.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 79.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-27 22:01:41 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/shared/_form.html.erb (3.1ms)
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (16.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 164ms (Views: 115.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/categories/new" for 127.0.0.1 at 2017-07-27 22:01:41 -0300
+Processing by Backoffice::CategoriesController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/new.html.erb within layouts/backoffice
+  Rendered backoffice/categories/shared/_form.html.erb (3.4ms)
+  Rendered backoffice/categories/new.html.erb within layouts/backoffice (4.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/backoffice/categories" for 127.0.0.1 at 2017-07-27 22:01:47 -0300
+Processing by Backoffice::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TB+3hIWYUZXGV9JXiKtdt3HEcuzu8N42anykAljtHHeI4WI3p3tpdwv6QQtQe4q2u9dJNsjXK3fXFbri+LYxJA==", "category"=>{"description"=>"aaaa"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "aaaa"], ["created_at", "2017-07-28 01:01:47.333692"], ["updated_at", "2017-07-28 01:01:47.333692"]]
+  [1m[35m (131.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/backoffice/categories
+Completed 302 Found in 147ms (ActiveRecord: 132.5ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-07-27 22:01:47 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (2.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
