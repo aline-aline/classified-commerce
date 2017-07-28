@@ -16,6 +16,7 @@
 					<thead>
 						<tr>
 							<th>#</th>
+							<th>Name</th>
 							<th>Email</th>
 							<th></th>
 						</tr>
@@ -24,6 +25,7 @@
 						<% @admins.each do |admin| %>
 						<tr>
 							<td><%= admin.id %></td>
+							<td><%= admin.name %></td>
 							<td><%= admin.email %></td>
 							<td style="width: 150px">
 								<%= link_to edit_backoffice_admin_path(admin),
