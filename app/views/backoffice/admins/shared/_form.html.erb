@@ -21,19 +21,27 @@
 		<div class="col-lg-6">
 			<%= form_for([:backoffice, @admin]) do |f| %>
 				<div class="form-group">
-					<label>Name</label>
+					<%= f.label :name %>
 					<%= f.text_field :name, class:"form-control", placeholder:"Nome do administrador" %>
 				</div>
 				<div class="form-group">
-					<label>Email</label>
+					<%= f.label :email %>
 					<%= f.text_field :email, class:"form-control", placeholder:"Email do administrador" %>
 				</div>
 				<div class="form-group">
-					<label>Password</label>
+					<%= f.label :role %>
+					<%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
+						<div class="radio">
+							<%= b.label { b.radio_button + b.text } %>
+						</div>
+					<% end %>
+				</div>
+				<div class="form-group">
+					<%= f.label :password %>
 					<%= f.password_field :password, class:"form-control", placeholder:"Senha" %>
 				</div>
 				<div class="form-group">
-					<label>password confirmation</label>
+					<%= f.label :password_confirmation %>
 					<%= f.password_field :password_confirmation, class:"form-control", placeholder:"Confirmação da senha" %>
 				</div>
 				<button type="submit" class="btn btn-default">Salvar</button>
