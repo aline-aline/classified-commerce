@@ -3,11 +3,12 @@ class Backoffice::AdminsController < BackofficeController
   
   def index
     #@admins = Admin.all
-    @admins = Admin.with_restricted_access
+    @admins = Admin.with_full_access
   end
 
   def new
-    @category = Admin.new
+    @admin = Admin.new
+    authorize @admin
   end
 
   def create
