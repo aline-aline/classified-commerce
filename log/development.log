@@ -17282,3 +17282,375 @@ AdminMailer#update_email: processed outbound mail in 16.3ms
 Completed 200 OK in 25ms (Views: 1.9ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-02 22:04:00 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/home/index.html.erb within layouts/site (7.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 594ms (Views: 564.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/backoffice/dashboard/" for 127.0.0.1 at 2017-08-02 22:04:05 -0300
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 279ms (Views: 84.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-02 22:04:09 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (774.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 861ms (Views: 855.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/admins/5/edit" for 127.0.0.1 at 2017-08-02 22:04:15 -0300
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (28.1ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (29.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 129ms (Views: 105.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/backoffice/admins/5" for 127.0.0.1 at 2017-08-02 22:04:20 -0300
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MA93q1dgJA+pKtvMQTl1eQ9btYrfkWHsZ/y3t7mGSxQmhIsk3P2teul9hwzeZ/lHNgckwM8vxeWzGzckrecSzQ==", "admin"=>{"name"=>"Isabela Nascimento", "email"=>"palma@stroman.biz", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (3.6ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (6.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 120ms (Views: 112.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/backoffice/admins/5" for 127.0.0.1 at 2017-08-02 22:04:30 -0300
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nn6EloBa0px3nVxBSBWFEO9S9f4FYNyeI7suW8yHyyYg9XgZC8db6TfKAIHXSwku1g5ktBXeeJf3XK7I2OaS/w==", "admin"=>{"name"=>"Isabela Nascimento", "email"=>"palma@stroman.biz", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "admins" SET "role" = ?, "encrypted_password" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["role", 0], ["encrypted_password", "$2a$11$43S7.mHQD0D4kgOelU.tFus0E6KaUUjDrzVRK5HCM3shoJoITwsL6"], ["updated_at", "2017-08-03 01:04:31.065637"], ["id", 5]]
+  [1m[35m (120.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.6ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.5ms)
+AdminMailer#update_email: processed outbound mail in 122.2ms
+Sent mail to palma@stroman.biz (32.6ms)
+Date: Wed, 02 Aug 2017 22:04:31 -0300
+From: noreply@example.com
+To: palma@stroman.biz
+Message-ID: <5982769fc8267_494b1ec637c89079@aline-linux.mail>
+Subject: Seus dados foram alterados!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5982769fc70d1_494b1ec637c88910";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5982769fc70d1_494b1ec637c88910
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Isabela Nascimento,
+==============
+
+Seus dados foram atualizados por Administrador Geral.
+
+----==_mimepart_5982769fc70d1_494b1ec637c88910
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Isabela Nascimento,</h1>
+<p>Seus dados foram atualizados por <b>Administrador Geral</b>.</p>
+  </body>
+</html>
+
+----==_mimepart_5982769fc70d1_494b1ec637c88910--
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 992ms (ActiveRecord: 122.7ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-02 22:04:31 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-02 22:19:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (1001.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.7ms)
+Completed 200 OK in 1597ms (Views: 1521.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-02 22:25:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (932.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 1401ms (Views: 1339.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice/admins/4/edit" for 127.0.0.1 at 2017-08-02 22:25:15 -0300
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (31.6ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (33.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 171ms (Views: 145.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/backoffice/admins/4" for 127.0.0.1 at 2017-08-02 22:25:25 -0300
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YOpMmd+sctZ25vfRvb0kcCTwDfMUpAfKo0YUFxnnEs52YbAWVDH7ozaxqxEi46hOHaycuQQao8N3oZSEDYZLFw==", "admin"=>{"name"=>"Isadora Cavalcanti", "email"=>"zoey_hirthe@beiergaylord.co", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "admins" SET "role" = ?, "encrypted_password" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["role", 0], ["encrypted_password", "$2a$11$qWfSRaJ1uiS1vnbn31A3uesbFGzEgRsVckaBfuiFNvKMiE2OvT28G"], ["updated_at", "2017-08-03 01:25:26.166646"], ["id", 4]]
+  [1m[35m (163.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.9ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.3ms)
+AdminMailer#update_email: processed outbound mail in 119.7ms
+Started GET "/backoffice/admins/4/edit" for 127.0.0.1 at 2017-08-02 22:26:04 -0300
+Processing by Backoffice::AdminsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (4.9ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (9.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 78ms (Views: 72.9ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/backoffice/admins/4" for 127.0.0.1 at 2017-08-02 22:26:13 -0300
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aUXSMpR0q4qFUru5F8q/cashR/sK6xQ3Q5K9pd3bH3B/zi69H+ki/8UF53mIlDNPkn3WsRpVsD6XdT02ybpGqQ==", "admin"=>{"name"=>"Isadora Cavalcanti", "email"=>"zoey_hirthe@beiergaylord.co", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_password" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["encrypted_password", "$2a$11$RatHWPngz37WC1mLrBGCVO3nj9gVCs7G.PF/ojIYC5Rjq108TIVom"], ["updated_at", "2017-08-03 01:26:13.959522"], ["id", 4]]
+  [1m[35m (153.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.4ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.4ms)
+AdminMailer#update_email: processed outbound mail in 11.8ms
+Sent mail to zoey_hirthe@beiergaylord.co (60033.7ms)
+Date: Wed, 02 Aug 2017 22:25:26 -0300
+From: noreply@example.com
+To: zoey_hirthe@beiergaylord.co
+Message-ID: <59827b86c576c_53371c56c40298ac@aline-linux.mail>
+Subject: Seus dados foram alterados!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59827b86c45e9_53371c56c4029764";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59827b86c45e9_53371c56c4029764
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Isadora Cavalcanti,
+==============
+
+Seus dados foram atualizados por Administrador Geral.
+
+----==_mimepart_59827b86c45e9_53371c56c4029764
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Isadora Cavalcanti,</h1>
+<p>Seus dados foram atualizados por <b>Administrador Geral</b>.</p>
+  </body>
+</html>
+
+----==_mimepart_59827b86c45e9_53371c56c4029764--
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 60870ms (ActiveRecord: 164.6ms)
+
+
+Sent mail to zoey_hirthe@beiergaylord.co (60021.3ms)
+Date: Wed, 02 Aug 2017 22:26:14 -0300
+From: noreply@example.com
+To: zoey_hirthe@beiergaylord.co
+Message-ID: <59827bb61f632_53371c56ccc3002d@aline-linux.mail>
+Subject: Seus dados foram alterados!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59827bb61ef2f_53371c56ccc29914";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59827bb61ef2f_53371c56ccc29914
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Isadora Cavalcanti,
+==============
+
+Seus dados foram atualizados por Administrador Geral.
+
+----==_mimepart_59827bb61ef2f_53371c56ccc29914
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Isadora Cavalcanti,</h1>
+<p>Seus dados foram atualizados por <b>Administrador Geral</b>.</p>
+  </body>
+</html>
+
+----==_mimepart_59827bb61ef2f_53371c56ccc29914--
+
+Redirected to http://localhost:3000/backoffice/admins
+Completed 302 Found in 60341ms (ActiveRecord: 154.1ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-02 22:27:14 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (4.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:29:24 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:29:24 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (2915.0ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (2696.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 5479ms (Views: 5422.1ms | ActiveRecord: 2.5ms)
+
+
+  Rendered layouts/backoffice_shared/_navigation.html.erb (4.4ms)
+Completed 200 OK in 5228ms (Views: 5196.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:29:55 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (7.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:32:57 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (11.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 110ms (Views: 107.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:37:31 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail.html.erb (0.6ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (10.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-03 20:46:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail.html.erb (0.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (1064.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.4ms)
+Completed 200 OK in 1608ms (Views: 1570.8ms | ActiveRecord: 1.2ms)
+
+

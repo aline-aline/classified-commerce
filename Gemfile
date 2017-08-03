@@ -67,6 +67,8 @@ group :development, :test do
 end
 
 group :development do
+  # Catches mail and serves it through a dream
+  gem 'mailcatcher'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
