@@ -17031,3 +17031,254 @@ Processing by Backoffice::AdminsController#update as HTML
 Completed 200 OK in 111ms (Views: 88.8ms | ActiveRecord: 1.2ms)
 
 
+Started PATCH "/backoffice/admins/5" for 127.0.0.1 at 2017-08-02 21:53:51 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0sRxVCut4Ocl5SwDdDbBiGe4vnRqJjDwI6+DWsGRAi1wO1K2zM+9tzAyHCSjlc4GMJzs8EWPMoUaT6ef2cd0Q==", "admin"=>{"name"=>"Isabela Nascimento", "email"=>"palma@stroman.biz", "role"=>"full_access", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering backoffice/admins/edit.html.erb within layouts/backoffice
+  Rendered backoffice/admins/shared/_form.html.erb (40.3ms)
+  Rendered backoffice/admins/edit.html.erb within layouts/backoffice (65.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.0ms)
+Completed 200 OK in 3501ms (Views: 2211.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/mailers" for 127.0.0.1 at 2017-08-02 21:54:03 -0300
+Processing by Rails::MailersController#index as HTML
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 573ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 127.0.0.1 at 2017-08-02 21:54:14 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.4ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.4ms)
+AdminMailer#update_email: processed outbound mail in 158.4ms
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/email.html.erb (9.4ms)
+Completed 200 OK in 179ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 127.0.0.1 at 2017-08-02 21:54:14 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.5ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (1.9ms)
+AdminMailer#update_email: processed outbound mail in 22.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 46ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email" for 127.0.0.1 at 2017-08-02 21:56:04 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.1ms)
+AdminMailer#update_email: processed outbound mail in 7.1ms
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting '='
+_buffer.append=( @admin.name,);@output_buffer.safe_append='<
+                              ^
+/home/aline/Workspace/classified-commerce/app/views/admin_mailer/update_email.html.erb:4: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/aline/Workspace/classified-commerce/app/views/admin_mailer/update_email.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^:
+  app/views/admin_mailer/update_email.html.erb:1:in `'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `module_eval'
+  actionview (5.1.2) lib/action_view/template.rb:307:in `compile'
+  actionview (5.1.2) lib/action_view/template.rb:257:in `block (2 levels) in compile!'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:348:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:256:in `block in compile!'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `synchronize'
+  actionview (5.1.2) lib/action_view/template.rb:244:in `compile!'
+  actionview (5.1.2) lib/action_view/template.rb:156:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:935:in `block in collect_responses_from_templates'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:932:in `each'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:932:in `each'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:932:in `map'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:932:in `collect_responses_from_templates'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:917:in `collect_responses'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:830:in `mail'
+  app/mailers/admin_mailer.rb:6:in `update_email'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionmailer (5.1.2) lib/action_mailer/rescuable.rb:23:in `block in process'
+  actionmailer (5.1.2) lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+  actionmailer (5.1.2) lib/action_mailer/rescuable.rb:22:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:609:in `block in process'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionmailer (5.1.2) lib/action_mailer/base.rb:608:in `process'
+  actionmailer (5.1.2) lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+  actionmailer (5.1.2) lib/action_mailer/message_delivery.rb:104:in `tap'
+  actionmailer (5.1.2) lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+  actionmailer (5.1.2) lib/action_mailer/message_delivery.rb:27:in `__getobj__'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/delegate.rb:80:in `method_missing'
+  actionmailer (5.1.2) lib/action_mailer/inline_preview_interceptor.rb:46:in `html_part'
+  actionmailer (5.1.2) lib/action_mailer/inline_preview_interceptor.rb:27:in `transform!'
+  actionmailer (5.1.2) lib/action_mailer/inline_preview_interceptor.rb:19:in `previewing_email'
+  actionmailer (5.1.2) lib/action_mailer/preview.rb:114:in `block in inform_preview_interceptors'
+  actionmailer (5.1.2) lib/action_mailer/preview.rb:113:in `each'
+  actionmailer (5.1.2) lib/action_mailer/preview.rb:113:in `inform_preview_interceptors'
+  actionmailer (5.1.2) lib/action_mailer/preview.rb:68:in `call'
+  railties (5.1.2) lib/rails/mailers_controller.rb:22:in `preview'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/3266ff506a0a0783/variables" for 127.0.0.1 at 2017-08-02 21:56:04 -0300
+Started GET "/rails/mailers/admin_mailer/update_email" for 127.0.0.1 at 2017-08-02 21:56:31 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.4ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.3ms)
+AdminMailer#update_email: processed outbound mail in 10.3ms
+  Rendering /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/aline/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/mailers/email.html.erb (3.3ms)
+Completed 200 OK in 21ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fhtml" for 127.0.0.1 at 2017-08-02 21:56:32 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (1.8ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (2.2ms)
+AdminMailer#update_email: processed outbound mail in 22.3ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/admin_mailer/update_email?part=text%2Fplain" for 127.0.0.1 at 2017-08-02 21:56:43 -0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/plain", "path"=>"admin_mailer/update_email"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin_mailer/update_email.html.erb within layouts/mailer
+  Rendered admin_mailer/update_email.html.erb within layouts/mailer (0.6ms)
+  Rendering admin_mailer/update_email.text.erb within layouts/mailer
+  Rendered admin_mailer/update_email.text.erb within layouts/mailer (0.5ms)
+AdminMailer#update_email: processed outbound mail in 16.3ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 25ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+
+
