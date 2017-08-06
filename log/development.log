@@ -18087,3 +18087,445 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 921ms (Views: 5.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 11:49:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 11:49:30 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail.html.erb (1.9ms)
+  Rendered backoffice/admins/shared/_send_mail.html.erb (0.9ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (2298.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (2297.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 4677ms (Views: 4670.6ms | ActiveRecord: 1.0ms)
+
+
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 4744ms (Views: 4672.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:50:07 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (1.2ms)
+Completed 200 OK in 73ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/backoffice/send_mail" for 127.0.0.1 at 2017-08-06 11:50:25 -0300
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"shayne.klein@connelly.co", "subject-text"=>"aaaa", "message-text"=>"aaaa"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin_mailer/send_message.html.erb within layouts/mailer
+  Rendered admin_mailer/send_message.html.erb within layouts/mailer (0.7ms)
+  Rendering admin_mailer/send_message.text.erb within layouts/mailer
+  Rendered admin_mailer/send_message.text.erb within layouts/mailer (0.4ms)
+AdminMailer#send_message: processed outbound mail in 163.3ms
+Sent mail to shayne.klein@connelly.co (7.0ms)
+Date: Sun, 06 Aug 2017 11:50:25 -0300
+From: noreply@example.com
+To: shayne.klein@connelly.co
+Message-ID: <59872cb1a5365_742228134d497df@aline-linux.mail>
+Subject: aaaa
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59872cb1a4158_742228134d49670";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872cb1a4158_742228134d49670
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872cb1a4158_742228134d49670
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    aaaa
+  </body>
+</html>
+
+----==_mimepart_59872cb1a4158_742228134d49670--
+
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (0.4ms)
+Completed 200 OK in 586ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:50:34 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.5ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:50:36 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.5ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 11:50:44 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail.html.erb (1.4ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (8.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:50:46 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/backoffice/send_mail" for 127.0.0.1 at 2017-08-06 11:50:53 -0300
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"shayne.klein@connelly.co", "subject-text"=>"aaa", "message-text"=>"aaa"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin_mailer/send_message.html.erb within layouts/mailer
+  Rendered admin_mailer/send_message.html.erb within layouts/mailer (1.1ms)
+  Rendering admin_mailer/send_message.text.erb within layouts/mailer
+  Rendered admin_mailer/send_message.text.erb within layouts/mailer (0.3ms)
+AdminMailer#send_message: processed outbound mail in 10.3ms
+Sent mail to shayne.klein@connelly.co (2.7ms)
+Date: Sun, 06 Aug 2017 11:50:53 -0300
+From: noreply@example.com
+To: shayne.klein@connelly.co
+Message-ID: <59872ccd287f9_742228134489971@aline-linux.mail>
+Subject: aaa
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59872ccd2814a_7422281344898ad";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872ccd2814a_7422281344898ad
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872ccd2814a_7422281344898ad
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    aaa
+  </body>
+</html>
+
+----==_mimepart_59872ccd2814a_7422281344898ad--
+
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:55:06 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.6ms)
+Completed 200 OK in 20ms (Views: 6.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 11:55:08 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail.html.erb (1.2ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (9.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 11:55:10 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/backoffice/send_mail" for 127.0.0.1 at 2017-08-06 11:55:17 -0300
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"shayne.klein@connelly.co", "subject-text"=>"asas", "message-text"=>"sasas"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin_mailer/send_message.html.erb within layouts/mailer
+  Rendered admin_mailer/send_message.html.erb within layouts/mailer (0.3ms)
+  Rendering admin_mailer/send_message.text.erb within layouts/mailer
+  Rendered admin_mailer/send_message.text.erb within layouts/mailer (0.6ms)
+AdminMailer#send_message: processed outbound mail in 9.5ms
+Sent mail to shayne.klein@connelly.co (4.7ms)
+Date: Sun, 06 Aug 2017 11:55:17 -0300
+From: noreply@example.com
+To: shayne.klein@connelly.co
+Message-ID: <59872dd519b53_7422281333010128@aline-linux.mail>
+Subject: asas
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59872dd518f86_74222813330100d1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872dd518f86_74222813330100d1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872dd518f86_74222813330100d1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    sasas
+  </body>
+</html>
+
+----==_mimepart_59872dd518f86_74222813330100d1--
+
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 11:57:37 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (1.3ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (8.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/send_mail/4/edit" for 127.0.0.1 at 2017-08-06 11:58:02 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/backoffice/send_mail" for 127.0.0.1 at 2017-08-06 11:58:09 -0300
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"zoey_hirthe@beiergaylord.co", "subject-text"=>"asas", "message-text"=>"asasas"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin_mailer/send_message.html.erb within layouts/mailer
+  Rendered admin_mailer/send_message.html.erb within layouts/mailer (0.5ms)
+  Rendering admin_mailer/send_message.text.erb within layouts/mailer
+  Rendered admin_mailer/send_message.text.erb within layouts/mailer (0.4ms)
+AdminMailer#send_message: processed outbound mail in 8.2ms
+Sent mail to zoey_hirthe@beiergaylord.co (4.4ms)
+Date: Sun, 06 Aug 2017 11:58:09 -0300
+From: noreply@example.com
+To: zoey_hirthe@beiergaylord.co
+Message-ID: <59872e81614e0_74222813330103d2@aline-linux.mail>
+Subject: asas
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59872e8160d1c_7422281333010214";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872e8160d1c_7422281333010214
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59872e8160d1c_7422281333010214
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    asasas
+  </body>
+</html>
+
+----==_mimepart_59872e8160d1c_7422281333010214--
+
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 15:18:24 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.0ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (8.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 253ms (Views: 222.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/backoffice/send_mail/3/edit" for 127.0.0.1 at 2017-08-06 15:18:29 -0300
+Processing by Backoffice::SendMailController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering backoffice/send_mail/edit.js.erb
+  Rendered backoffice/send_mail/edit.js.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/backoffice/send_mail" for 127.0.0.1 at 2017-08-06 15:18:35 -0300
+Processing by Backoffice::SendMailController#create as JS
+  Parameters: {"utf8"=>"✓", "recipient-text"=>"shayne.klein@connelly.co", "subject-text"=>"asasa", "message-text"=>"asasas"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin_mailer/send_message.html.erb within layouts/mailer
+  Rendered admin_mailer/send_message.html.erb within layouts/mailer (0.4ms)
+  Rendering admin_mailer/send_message.text.erb within layouts/mailer
+  Rendered admin_mailer/send_message.text.erb within layouts/mailer (0.3ms)
+AdminMailer#send_message: processed outbound mail in 11.9ms
+Sent mail to shayne.klein@connelly.co (5.2ms)
+Date: Sun, 06 Aug 2017 15:18:35 -0300
+From: noreply@example.com
+To: shayne.klein@connelly.co
+Message-ID: <59875d7b53e85_7422281344810517@aline-linux.mail>
+Subject: asasa
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59875d7b52d21_74222813448104b8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59875d7b52d21_74222813448104b8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59875d7b52d21_74222813448104b8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    asasas
+  </body>
+</html>
+
+----==_mimepart_59875d7b52d21_74222813448104b8--
+
+  Rendering backoffice/send_mail/create.js.erb
+  Rendered backoffice/send_mail/create.js.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 15:58:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (1.5ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (1206.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 3075ms (Views: 3026.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2017-08-06 15:58:50 -0300
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (8.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 140ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/backoffice/admins" for 127.0.0.1 at 2017-08-06 15:58:57 -0300
+Processing by Backoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering backoffice/admins/index.html.erb within layouts/backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  Rendered backoffice/admins/shared/_send_mail_modal.html.erb (2.7ms)
+  Rendered backoffice/admins/index.html.erb within layouts/backoffice (20.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 111ms (Views: 108.1ms | ActiveRecord: 0.6ms)
+
+

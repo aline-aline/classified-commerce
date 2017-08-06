@@ -1,8 +1,11 @@
 $(function() {
-    let $sendMailModal = $('#sendMailModal');
-    $sendMailModal.modal('hide');
-    $('$subject-text').val('');
-    $('$message-text').val('');
-    $.notify('Email enviado com sucesso!'), "success"
+    // Hides the modal
+    $('#sendMailModal').modal('hide');
 
+    // Set subject and message to empty string
+    $('#subject-text').val('');
+    $('#message-text').val('');
+
+    // Show message
+    $.notify('<%= @notify_message %>', "<%= @notify_flag %>")
 });

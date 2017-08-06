@@ -45,15 +45,11 @@
 	<!-- /#wrapper -->
 	
 	<% if notice %>
-		<script>
-			$.notify("<%= notice %>", "success");
-		</script>
+		<%= javascript_tag "$.notify('#{notice}', 'success');" %>
 	<% end %>
 
 	<% if alert %>
-		<script>
-			$.notify("<%= alert %>", "error");
-		</script>
+		<%= javascript_tag "$.notify('#{alert}', 'error');" %>
 	<% end %>
 </body>
 </html>
