@@ -24,9 +24,10 @@ namespace :utils do
     100.times do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
-        description: Faker::RuPaul.quote(Random.rand(3)),
+        description: Faker::Lorem.paragraph([1,2,3].sample),
         member: Member.all.sample,
-        category: Category.all.sample
+        category: Category.all.sample,
+        price: "#{Random.rand(500)},#{Random.rand(99)}"
       )
     end
     puts "ANÚNCIOS cadastrados com sucesso!"
