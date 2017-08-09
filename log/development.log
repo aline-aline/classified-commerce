@@ -22770,3 +22770,551 @@ Migrating to AddPriceCentsToAds (20170808002113)
   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentPictureToAds (20170809003140)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentPictureToAds (20170809003140)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentPictureToAds (20170809003140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170809003140"]]
+  [1m[35m (137.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-15qe00r.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]'
+Command :: convert '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]' -auto-orient -resize "320x150" '/tmp/06e228956842024e5aa9c1ca1e9b428120170808-7685-14vdagd'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]'
+Command :: convert '/tmp/96a3be3cf272e017046d1b2674a52bd320170808-7685-1hj4z4c.jpg[0]' -auto-orient -resize "100x100>" '/tmp/06e228956842024e5aa9c1ca1e9b428120170808-7685-wb7k12'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (143.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (121.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateMembers (20170702220307)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_email" ON "members" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_reset_password_token" ON "members" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220307"]]
+  [1m[35m (119.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateAdmins (20170702220332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220332"]]
+  [1m[35m (147.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20170702221652)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(60), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702221652"]]
+  [1m[35m (119.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAds (20170703235226)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "member_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_93b599c7ff"
+FOREIGN KEY ("member_id")
+  REFERENCES "members" ("id")
+, CONSTRAINT "fk_rails_b1934989b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_member_id" ON "ads" ("member_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_category_id" ON "ads" ("category_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170703235226"]]
+  [1m[35m (160.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameAndRoleToAdmin (20170728000011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "role" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170728000011"]]
+  [1m[35m (105.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPriceCentsToAds (20170808002113)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "ads" ADD "price_cents" integer DEFAULT 0[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170808002113"]]
+  [1m[35m (128.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentPictureToAds (20170809003140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_content_type" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170809003140"]]
+  [1m[35m (109.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-09 01:09:06.076212"], ["updated_at", "2017-08-09 01:09:06.076212"]]
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Animais e acessórios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Animais e acessórios"], ["created_at", "2017-08-09 01:09:06.186379"], ["updated_at", "2017-08-09 01:09:06.186379"]]
+  [1m[35m (94.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Esportes"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Esportes"], ["created_at", "2017-08-09 01:09:06.286588"], ["updated_at", "2017-08-09 01:09:06.286588"]]
+  [1m[35m (125.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Para a sua casa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Para a sua casa"], ["created_at", "2017-08-09 01:09:06.414980"], ["updated_at", "2017-08-09 01:09:06.414980"]]
+  [1m[35m (328.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Eletrônicos e celulares"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Eletrônicos e celulares"], ["created_at", "2017-08-09 01:09:06.745824"], ["updated_at", "2017-08-09 01:09:06.745824"]]
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Música e hobbies"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Música e hobbies"], ["created_at", "2017-08-09 01:09:06.839600"], ["updated_at", "2017-08-09 01:09:06.839600"]]
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Bebês e crianças"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Bebês e crianças"], ["created_at", "2017-08-09 01:09:06.942944"], ["updated_at", "2017-08-09 01:09:06.942944"]]
+  [1m[35m (113.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Moda e beleza"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Moda e beleza"], ["created_at", "2017-08-09 01:09:07.061131"], ["updated_at", "2017-08-09 01:09:07.061131"]]
+  [1m[35m (74.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Veículos e barcos"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Veículos e barcos"], ["created_at", "2017-08-09 01:09:07.141636"], ["updated_at", "2017-08-09 01:09:07.141636"]]
+  [1m[35m (116.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Imóveis"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Imóveis"], ["created_at", "2017-08-09 01:09:07.263069"], ["updated_at", "2017-08-09 01:09:07.263069"]]
+  [1m[35m (94.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Empregos e negócios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Empregos e negócios"], ["created_at", "2017-08-09 01:09:07.360474"], ["updated_at", "2017-08-09 01:09:07.360474"]]
+  [1m[35m (84.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$ZRXbVgS9Li32V3S0DdSqduFDjNsDcw32SHSPC7iISu6j6gghSIu1."], ["created_at", "2017-08-09 01:09:07.667890"], ["updated_at", "2017-08-09 01:09:07.667890"], ["name", "Administrador Geral"], ["role", 0]]
+  [1m[35m (207.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jacky@konopelski.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "jacky@konopelski.co"], ["encrypted_password", "$2a$11$commUCzbE5D.5iIhOvZ8H.FskE5cVE2Ha44t2LP4bXwUop.c.FHLS"], ["created_at", "2017-08-09 01:09:09.282780"], ["updated_at", "2017-08-09 01:09:09.282780"], ["name", "Gabriela Franco"], ["role", 0]]
+  [1m[35m (104.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "duncan@ziemeveum.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "duncan@ziemeveum.net"], ["encrypted_password", "$2a$11$V8WTXFA8M0FFwArfYOZQgOBYCDxkJLi5oaBiQCTnh6tebZA6bnIG2"], ["created_at", "2017-08-09 01:09:09.552808"], ["updated_at", "2017-08-09 01:09:09.552808"], ["name", "Nicole Rocha Jr."], ["role", 1]]
+  [1m[35m (133.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "danyka@beierkreiger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "danyka@beierkreiger.com"], ["encrypted_password", "$2a$11$SZpezLz5oKVcHlPnoxwVaOihOht1u1CAEwD95WqWwOPcNv3s3aFN."], ["created_at", "2017-08-09 01:09:09.843246"], ["updated_at", "2017-08-09 01:09:09.843246"], ["name", "Dra. Murilo Melo"], ["role", 1]]
+  [1m[35m (88.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "laurianne@hansenkshlerin.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "laurianne@hansenkshlerin.biz"], ["encrypted_password", "$2a$11$zrD7U/kSHb9GegaY5pXR1eRpTSoQvURV8JwgdsBAd8TYhif/BF9I2"], ["created_at", "2017-08-09 01:09:10.090980"], ["updated_at", "2017-08-09 01:09:10.090980"], ["name", "Raul Sá"], ["role", 0]]
+  [1m[35m (73.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jewell.flatley@marquardt.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "jewell.flatley@marquardt.net"], ["encrypted_password", "$2a$11$QcRBwFRBOliDbjcYlYr1K.uqYZ6Ex5LAZCywMMmZhlUXl8EFJrtMS"], ["created_at", "2017-08-09 01:09:10.325583"], ["updated_at", "2017-08-09 01:09:10.325583"], ["name", "Isis Batista"], ["role", 1]]
+  [1m[35m (126.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "ebony@heel.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "ebony@heel.net"], ["encrypted_password", "$2a$11$MM4IAJ0nDcCIbdFpT5i5ueCbKu9Dn9Uc982gt1.AkTSoRxZb.eRxm"], ["created_at", "2017-08-09 01:09:10.609045"], ["updated_at", "2017-08-09 01:09:10.609045"], ["name", "Paulo Lopes Neto"], ["role", 0]]
+  [1m[35m (103.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "rosanna@waelchi.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "rosanna@waelchi.io"], ["encrypted_password", "$2a$11$4VDO8HKc4ipH/YEEe0geMeFmHk2LaFjhQZ7l82e6lQMkF36v.l9m6"], ["created_at", "2017-08-09 01:09:10.867841"], ["updated_at", "2017-08-09 01:09:10.867841"], ["name", "Isabelly Sales"], ["role", 0]]
+  [1m[35m (104.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "sebastian@schiller.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "sebastian@schiller.io"], ["encrypted_password", "$2a$11$TPz1sjTJXJRnNfzg08.ciuJg9QzAOgmgwQRmLHZzp7PAGIlThWHam"], ["created_at", "2017-08-09 01:09:11.129405"], ["updated_at", "2017-08-09 01:09:11.129405"], ["name", "Eduarda Martins Filho"], ["role", 0]]
+  [1m[35m (210.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "vito@schoenbednar.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "vito@schoenbednar.biz"], ["encrypted_password", "$2a$11$121oRKHWm462PbXOCRddceBCoSxpLxFQDfv5lD.aCYNFIUnaCMNmi"], ["created_at", "2017-08-09 01:09:11.494864"], ["updated_at", "2017-08-09 01:09:11.494864"], ["name", "Eduarda Batista"], ["role", 1]]
+  [1m[35m (117.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "vesta@mckenzie.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "vesta@mckenzie.biz"], ["encrypted_password", "$2a$11$zGkSgk1qHGGbJn4pK2EUi.L7aB7WiDI68CSQ4djvy9vXBRSIO6W8a"], ["created_at", "2017-08-09 01:09:11.769320"], ["updated_at", "2017-08-09 01:09:11.769320"], ["name", "Maria Sá Jr."], ["role", 1]]
+  [1m[35m (119.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (164.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (166.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateMembers (20170702220307)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_email" ON "members" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_members_on_reset_password_token" ON "members" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220307"]]
+  [1m[35m (122.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateAdmins (20170702220332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702220332"]]
+  [1m[35m (161.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20170702221652)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(60), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170702221652"]]
+  [1m[35m (119.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAds (20170703235226)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "member_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_93b599c7ff"
+FOREIGN KEY ("member_id")
+  REFERENCES "members" ("id")
+, CONSTRAINT "fk_rails_b1934989b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_member_id" ON "ads" ("member_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_ads_on_category_id" ON "ads" ("category_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170703235226"]]
+  [1m[35m (129.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameAndRoleToAdmin (20170728000011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "admins" ADD "role" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170728000011"]]
+  [1m[35m (98.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPriceCentsToAds (20170808002113)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "ads" ADD "price_cents" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170808002113"]]
+  [1m[35m (141.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentPictureToAds (20170809003140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_content_type" varchar[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ads" ADD "picture_updated_at" datetime[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170809003140"]]
+  [1m[35m (111.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-09 01:10:32.426103"], ["updated_at", "2017-08-09 01:10:32.426103"]]
+  [1m[35m (66.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ads_on_member_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_members_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_members_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Animais e acessórios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Animais e acessórios"], ["created_at", "2017-08-09 01:10:32.520675"], ["updated_at", "2017-08-09 01:10:32.520675"]]
+  [1m[35m (94.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Esportes"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Esportes"], ["created_at", "2017-08-09 01:10:32.619185"], ["updated_at", "2017-08-09 01:10:32.619185"]]
+  [1m[35m (103.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Para a sua casa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Para a sua casa"], ["created_at", "2017-08-09 01:10:32.730287"], ["updated_at", "2017-08-09 01:10:32.730287"]]
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Eletrônicos e celulares"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Eletrônicos e celulares"], ["created_at", "2017-08-09 01:10:32.806875"], ["updated_at", "2017-08-09 01:10:32.806875"]]
+  [1m[35m (99.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Música e hobbies"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Música e hobbies"], ["created_at", "2017-08-09 01:10:32.909736"], ["updated_at", "2017-08-09 01:10:32.909736"]]
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Bebês e crianças"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Bebês e crianças"], ["created_at", "2017-08-09 01:10:33.007473"], ["updated_at", "2017-08-09 01:10:33.007473"]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Moda e beleza"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Moda e beleza"], ["created_at", "2017-08-09 01:10:33.084910"], ["updated_at", "2017-08-09 01:10:33.084910"]]
+  [1m[35m (97.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Veículos e barcos"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Veículos e barcos"], ["created_at", "2017-08-09 01:10:33.184368"], ["updated_at", "2017-08-09 01:10:33.184368"]]
+  [1m[35m (96.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Imóveis"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Imóveis"], ["created_at", "2017-08-09 01:10:33.283693"], ["updated_at", "2017-08-09 01:10:33.283693"]]
+  [1m[35m (74.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."description" = ? LIMIT ?[0m  [["description", "Empregos e negócios"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Empregos e negócios"], ["created_at", "2017-08-09 01:10:33.362166"], ["updated_at", "2017-08-09 01:10:33.362166"]]
+  [1m[35m (473.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$sPEVuuo0771N1ftfR316V.4SpMwuREqF8OC03fnEDeXSJ2gI.TZ8e"], ["created_at", "2017-08-09 01:10:34.018289"], ["updated_at", "2017-08-09 01:10:34.018289"], ["name", "Administrador Geral"], ["role", 0]]
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "lucas@bergnaumroob.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "lucas@bergnaumroob.co"], ["encrypted_password", "$2a$11$jFO6C8ndzI0BanMQsUqk9us7nyVNICI9qB/3zd8kz299HE7Q1wUsa"], ["created_at", "2017-08-09 01:10:35.092468"], ["updated_at", "2017-08-09 01:10:35.092468"], ["name", "Sra. Júlio Soares"], ["role", 0]]
+  [1m[35m (142.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jaquelin_simonis@raugrant.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "jaquelin_simonis@raugrant.name"], ["encrypted_password", "$2a$11$pFMjGHEfnTYMXKz3HRmQEOV0m9LVBrls4Ud8dulz5R33ZcX64T6UC"], ["created_at", "2017-08-09 01:10:35.387315"], ["updated_at", "2017-08-09 01:10:35.387315"], ["name", "Larissa Veloso Jr."], ["role", 1]]
+  [1m[35m (79.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "gino.ward@okon.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "gino.ward@okon.info"], ["encrypted_password", "$2a$11$kmJndW4jv85dDDSFT0f.DOQSaGKv0aWChSj0IiqgQlx5b6Fwd/L4C"], ["created_at", "2017-08-09 01:10:35.620979"], ["updated_at", "2017-08-09 01:10:35.620979"], ["name", "Helena Xavier Filho"], ["role", 1]]
+  [1m[35m (76.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "lucinda.herman@schowalter.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "lucinda.herman@schowalter.org"], ["encrypted_password", "$2a$11$89at.d/1kjqTrTWKmxLUaO4T/4AyGwajaQ0wztEPP4VpizYDo65bW"], ["created_at", "2017-08-09 01:10:35.854155"], ["updated_at", "2017-08-09 01:10:35.854155"], ["name", "Lorraine Albuquerque"], ["role", 0]]
+  [1m[35m (98.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "bertram@littel.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "bertram@littel.com"], ["encrypted_password", "$2a$11$CcAaNZOsEXoe/.kzHFZ9FOyP24j2C88OfQQUFuRJsvMel1rVYXLYW"], ["created_at", "2017-08-09 01:10:36.108219"], ["updated_at", "2017-08-09 01:10:36.108219"], ["name", "Francisco Batista"], ["role", 1]]
+  [1m[35m (193.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jovany@wintheiser.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "jovany@wintheiser.name"], ["encrypted_password", "$2a$11$dV1VNocWcfwf2yOIsU4mmupgdRLjIG/YFNs61HDi58QDwmD6mL2um"], ["created_at", "2017-08-09 01:10:36.452147"], ["updated_at", "2017-08-09 01:10:36.452147"], ["name", "Bruna Araújo"], ["role", 0]]
+  [1m[35m (77.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "alysa_harris@ratke.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "alysa_harris@ratke.net"], ["encrypted_password", "$2a$11$noiUBPhJ6sMTC3wWB7Tc5usNg6fhEIKpdDQp1axvrr8zrOkK9Btpu"], ["created_at", "2017-08-09 01:10:36.686242"], ["updated_at", "2017-08-09 01:10:36.686242"], ["name", "Salvador Moraes"], ["role", 1]]
+  [1m[35m (87.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "timmothy@considine.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "timmothy@considine.io"], ["encrypted_password", "$2a$11$da6l6fkb.79tUBY/X0qHqebAvV9y/8omkXv8Xo6PGS4l9DGxSIncC"], ["created_at", "2017-08-09 01:10:36.925620"], ["updated_at", "2017-08-09 01:10:36.925620"], ["name", "Alice Aragão"], ["role", 1]]
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "george_kuphal@osinski.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "george_kuphal@osinski.info"], ["encrypted_password", "$2a$11$IGYCrOo9nRJr5Pz4mURu7e1vZks0k6iWI/EFf.bLZ8Nna8lOpsWrW"], ["created_at", "2017-08-09 01:10:37.162754"], ["updated_at", "2017-08-09 01:10:37.162754"], ["name", "Rafael Rocha"], ["role", 1]]
+  [1m[35m (89.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "vernice@sanford.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "vernice@sanford.com"], ["encrypted_password", "$2a$11$qrJNN2QJL2xKJuf0efX0FetawqbyzqFIgkwwuXc.7z0dwWXOJkCaG"], ["created_at", "2017-08-09 01:10:37.411847"], ["updated_at", "2017-08-09 01:10:37.411847"], ["name", "Lorena Duarte"], ["role", 1]]
+  [1m[35m (105.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-1do5lp6.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]' -auto-orient -resize "320x150" '/tmp/38124e0f051b83971fc592721dbe938d20170808-8382-1s65jo8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-m44n01.jpg[0]' -auto-orient -resize "100x100>" '/tmp/38124e0f051b83971fc592721dbe938d20170808-8382-11eckx4'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170808-8382-1e92z3o.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-08-08 22:13:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."description" ASC[0m
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  Rendered site/home/index.html.erb within layouts/site (23.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.5ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 1805ms (Views: 1775.6ms | ActiveRecord: 2.2ms)
+
+
