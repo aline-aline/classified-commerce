@@ -1,24 +1,11 @@
-# README
+# Ruby on Rails - Classified Commerce
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+E-commerce site developed as part of [Ruby on Rails Completo](https://www.udemy.com/rubyonrails/) course.
+## Dependencies
 
-Things you may want to cover:
+* ImageMagick (https://www.imagemagick.org)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+sudo apt update
+sudo apt install imagemagick
+```
