@@ -35,4 +35,14 @@ Admin.create!(
   role: 0
 )
 
-puts "Admistrador cadastrado com sucesso!"
+puts "Administrador cadastrado com sucesso!"
+
+puts "Cadastrando o MEMBRO Padrão..."
+
+Member.create!(
+  email: "membro@membro.com", 
+  password: "123456", 
+  password_confirmation: "123456"
+)
+
+puts "Membro cadastrado com sucesso!"
