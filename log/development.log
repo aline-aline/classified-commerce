@@ -36556,3 +36556,370 @@ Command :: convert '/tmp/a87ff679a2f3e71d9181a67b7542122c20170813-18474-2xafxu.j
 Command :: file -b --mime '/tmp/a87ff679a2f3e71d9181a67b7542122c20170813-18474-181040q.jpg'
   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Nesciunt hic id eos."], ["description", "Nulla libero rem et adipisci id omnis ducimus."], ["member_id", 96], ["category_id", 8], ["created_at", "2017-08-13 18:04:12.298183"], ["updated_at", "2017-08-13 18:04:12.298183"], ["price_cents", 22670], ["picture_file_name", "4.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 11858], ["picture_updated_at", "2017-08-13 18:04:12.230378"]]
   [1m[35m (148.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."member_id" = ? LIMIT ?[0m  [["member_id", 1], ["LIMIT", 11]]
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-wvgp15.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]'
+Command :: convert '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]' -auto-orient -resize "320x" -crop "320x150+0+15" +repage '/tmp/7bd52bed90d85f61ee1c8d7a9230cec020170813-21528-moxi3j'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]'
+Command :: convert '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-1gr5y4f.jpg[0]' -auto-orient -resize "100x100>" '/tmp/7bd52bed90d85f61ee1c8d7a9230cec020170813-21528-iywkpv'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/eccbc87e4b5ce2fe28308fd9f2a7baf320170813-21528-q1dk3p.jpg'
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptas iste optio voluptatem animi quo molestiae aliquam dicta."], ["description", "Qui quis atque et voluptas dolor itaque odio. Magni qui recusandae voluptatem."], ["member_id", 1], ["category_id", 10], ["created_at", "2017-08-13 18:13:10.316634"], ["updated_at", "2017-08-13 18:13:10.316634"], ["price_cents", 24147], ["picture_file_name", "3.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 235172], ["picture_updated_at", "2017-08-13 18:13:09.848226"]]
+  [1m[35m (150.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-11ue3vx.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]' -auto-orient -resize "320x" -crop "320x150+0+16" +repage '/tmp/c642d3507c9ec6c83e4e8fd64929cd4520170813-21528-tnji9o'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-1o7zfxi.jpg[0]' -auto-orient -resize "100x100>" '/tmp/c642d3507c9ec6c83e4e8fd64929cd4520170813-21528-111sc43'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-7slzbs.jpg'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Accusamus explicabo doloribus nemo quibusdam et."], ["description", "Vitae nihil et nam. Earum ex sed architecto rem."], ["member_id", 1], ["category_id", 8], ["created_at", "2017-08-13 18:13:10.570180"], ["updated_at", "2017-08-13 18:13:10.570180"], ["price_cents", 49379], ["picture_file_name", "7.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 32104], ["picture_updated_at", "2017-08-13 18:13:10.479059"]]
+  [1m[35m (190.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-ui5v3f.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]' -auto-orient -resize "320x" -crop "320x150+0+16" +repage '/tmp/023fca563dc024c94ee77ee8f6c3e62b20170813-21528-gahl1t'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]'
+Command :: convert '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-18ka5go.jpg[0]' -auto-orient -resize "100x100>" '/tmp/023fca563dc024c94ee77ee8f6c3e62b20170813-21528-1qo5zcb'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/8f14e45fceea167a5a36dedd4bea254320170813-21528-jzmq15.jpg'
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Repellendus vel voluptas labore incidunt consequatur rerum."], ["description", "Quos dolorem enim at. Voluptatem rem omnis. Recusandae est aliquid id."], ["member_id", 1], ["category_id", 1], ["created_at", "2017-08-13 18:13:10.857872"], ["updated_at", "2017-08-13 18:13:10.857872"], ["price_cents", 37550], ["picture_file_name", "7.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 32104], ["picture_updated_at", "2017-08-13 18:13:10.771327"]]
+  [1m[35m (174.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-1qj2prv.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]' -auto-orient -resize "320x" -crop "320x150+0+28" +repage '/tmp/fa66ffc87b37e79de2fc000aad27c87720170813-21528-1n8b9kt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-hc9d4.jpg[0]' -auto-orient -resize "100x100>" '/tmp/fa66ffc87b37e79de2fc000aad27c87720170813-21528-k590cn'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/cfcd208495d565ef66e7dff9f98764da20170813-21528-1eiglms.jpg'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Sint ut."], ["description", "Distinctio recusandae labore sunt. Aut vitae dolorum laboriosam tempore et accusamus. Vitae perferendis sed magni officia consectetur et."], ["member_id", 1], ["category_id", 7], ["created_at", "2017-08-13 18:13:11.125363"], ["updated_at", "2017-08-13 18:13:11.125363"], ["price_cents", 48600], ["picture_file_name", "0.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 41436], ["picture_updated_at", "2017-08-13 18:13:11.043792"]]
+  [1m[35m (143.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Command :: file -b --mime '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-23pt3e.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]'
+Command :: convert '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]' -auto-orient -resize "320x" -crop "320x150+0+25" +repage '/tmp/d1078bacee4212a6ba85db395751013820170813-21528-1wej1j6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]'
+Command :: convert '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1yvb9d3.jpg[0]' -auto-orient -resize "100x100>" '/tmp/d1078bacee4212a6ba85db395751013820170813-21528-1tld5xi'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/e4da3b7fbbce2345d7772b0674a318d520170813-21528-1lxbcee.jpg'
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ads" ("title", "description", "member_id", "category_id", "created_at", "updated_at", "price_cents", "picture_file_name", "picture_content_type", "picture_file_size", "picture_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ducimus at quis."], ["description", "Repellat at voluptatibus voluptatum quos non est. Quia beatae inventore. Repellat numquam explicabo aut atque voluptas."], ["member_id", 1], ["category_id", 1], ["created_at", "2017-08-13 18:13:11.501906"], ["updated_at", "2017-08-13 18:13:11.501906"], ["price_cents", 41351], ["picture_file_name", "5.jpg"], ["picture_content_type", "image/jpeg"], ["picture_file_size", 87266], ["picture_updated_at", "2017-08-13 18:13:11.277092"]]
+  [1m[35m (154.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/site/profile/dashboard" for 127.0.0.1 at 2017-08-13 15:13:56 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::Profile::DashboardController#index as HTML
+  Rendering site/profile/dashboard/index.html.erb within layouts/profile
+  Rendered site/profile/dashboard/index.html.erb within layouts/profile (2.1ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (1007.9ms)
+Completed 200 OK in 1395ms (Views: 1393.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site/profile/dashboard" for 127.0.0.1 at 2017-08-13 17:29:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::Profile::DashboardController#index as HTML
+  Rendering site/profile/dashboard/index.html.erb within layouts/profile
+  Rendered site/profile/dashboard/index.html.erb within layouts/profile (11.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (6125.2ms)
+Completed 200 OK in 7914ms (Views: 7912.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/profile/dashboard" for 127.0.0.1 at 2017-08-13 17:43:22 -0300
+Processing by Site::Profile::DashboardController#index as HTML
+  Rendering site/profile/dashboard/index.html.erb within layouts/profile
+  Rendered site/profile/dashboard/index.html.erb within layouts/profile (0.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 98ms (Views: 96.7ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:43:25 -0300
+Processing by Site::Profile::AdsController#index as HTML
+Completed 500 Internal Server Error in 457ms
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/site/profile/ads_controller.rb:4:in `index'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/4a41942fa48d874b/variables" for 127.0.0.1 at 2017-08-13 17:43:26 -0300
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:45:07 -0300
+Processing by Site::Profile::AdsController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/site/profile/ads_controller.rb:4:in `index'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/0a59a4ca776ec00e/variables" for 127.0.0.1 at 2017-08-13 17:45:08 -0300
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:45:23 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (4.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 318ms (Views: 181.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:46:18 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (3.1ms)
+  Rendered layouts/site_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 264ms (Views: 221.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:48:53 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (18.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (5147.6ms)
+Completed 200 OK in 7657ms (Views: 7385.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:50:46 -0300
+Processing by Site::Profile::AdsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+
+
+NoMethodError - undefined method `to_the' for Ad (call 'Ad.connection' to establish a connection):Class:
+  activerecord (5.1.2) lib/active_record/dynamic_matchers.rb:22:in `method_missing'
+  app/controllers/site/profile/ads_controller.rb:4:in `index'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/0449da0fd21eaa10/variables" for 127.0.0.1 at 2017-08-13 17:50:46 -0300
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-13 17:51:11 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.9ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (86.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 141ms (Views: 134.0ms | ActiveRecord: 2.3ms)
+
+
