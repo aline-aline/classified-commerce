@@ -23,7 +23,10 @@
 					</li>
 				<% else %>
 					<li>
-						<%= link_to current_member.email, :action => "#" %>
+						<%= link_to current_member.email, "#" %>
+					</li>
+					<li>
+						<%= link_to "Perfil", site_profile_dashboard_index_path %>
 					</li>
 					<li>
 						<%= link_to "Logout", destroy_member_session_path, method: :delete %>
