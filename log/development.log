@@ -37254,3 +37254,614 @@ Processing by Site::HomeController#index as HTML
 Completed 200 OK in 67ms (Views: 61.7ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:48:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (3.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1156.7ms)
+Completed 200 OK in 1609ms (Views: 1569.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:48:42 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (1.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:48:47 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (2.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:49:07 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (1.6ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:49:08 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (3.1ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:54:18 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Site::Profile::AdsController#index as HTML
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" IS NULL[0m
+  Rendered site/profile/ads/index.html.erb within layouts/profile (2.7ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1054.7ms)
+Completed 200 OK in 1389ms (Views: 1350.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2017-08-14 20:54:22 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.1ms)
+  Rendered members/sessions/new.html.erb within layouts/application (170.6ms)
+Completed 200 OK in 245ms (Views: 228.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2017-08-14 20:54:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f851P4S9kM2mPdAOc4mKUGk/zFJfk2pN8tbBaoS7UIv3Cg2pXtPFN5cfWL6rkkqgS/39X7qZT1MuFgVmwSKgQQ==", "member"=>{"email"=>"membro@membro.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "membro@membro.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.8ms)[0m  [1m[33mUPDATE "members" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "members"."id" = ?[0m  [["current_sign_in_at", "2017-08-14 23:54:30.027270"], ["last_sign_in_at", "2017-08-14 23:54:30.027270"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2017-08-14 23:54:30.028260"], ["id", 1]]
+  [1m[35m (130.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 429ms (ActiveRecord: 147.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 20:54:30 -0300
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."description" ASC[0m
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" ORDER BY "ads"."created_at" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered site/home/index.html.erb within layouts/site (22.1ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.0ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/site/profile/dashboard" for 127.0.0.1 at 2017-08-14 20:54:37 -0300
+Processing by Site::Profile::DashboardController#index as HTML
+  Rendering site/profile/dashboard/index.html.erb within layouts/profile
+  Rendered site/profile/dashboard/index.html.erb within layouts/profile (0.4ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 66ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 20:54:39 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (68.1ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 103ms (Views: 100.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 21:08:48 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (36.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 96ms (Views: 73.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 21:11:00 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (4.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"edit", :controller=>"site/profile/ads"}, missing required keys: [:id]:
+  actionpack (5.1.2) lib/action_dispatch/journey/formatter.rb:55:in `generate'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:736:in `generate'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:767:in `generate'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:814:in `url_for'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:267:in `call'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:208:in `call'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:323:in `block (2 levels) in define_url_helper'
+  app/views/site/profile/ads/index.html.erb:23:in `block in _app_views_site_profile_ads_index_html_erb___2327345259791058862_69965892619340'
+  activerecord (5.1.2) lib/active_record/relation/delegation.rb:39:in `each'
+  activerecord (5.1.2) lib/active_record/relation/delegation.rb:39:in `each'
+  app/views/site/profile/ads/index.html.erb:15:in `_app_views_site_profile_ads_index_html_erb___2327345259791058862_69965892619340'
+  actionview (5.1.2) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.2) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.2) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.2) lib/action_view/template.rb:155:in `render'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.2) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.2) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/aline/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+  actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/40fb19e8f4bfef44/variables" for 127.0.0.1 at 2017-08-14 21:11:00 -0300
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 21:11:26 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.8ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (13.9ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 21:13:12 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (30.2ms)
+  Rendered layouts/site_shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 89ms (Views: 65.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:13:14 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (0.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:18:37 -0300
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/site/profile/ads_controller.rb:2:in `[]'
+  app/controllers/site/profile/ads_controller.rb:2:in `<class:AdsController>'
+  app/controllers/site/profile/ads_controller.rb:1:in `<top (required)>'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:476:in `block in load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:661:in `new_constants_in'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:475:in `load_file'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:374:in `block in require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `block in load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.1.2) lib/active_support/concurrency/share_lock.rb:149:in `exclusive'
+  activesupport (5.1.2) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:36:in `load_interlock'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:357:in `require_or_load'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:510:in `load_missing_constant'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:202:in `const_missing'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+  activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:582:in `get'
+  activesupport (5.1.2) lib/active_support/dependencies.rb:613:in `constantize'
+  actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+  actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.2) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/10bd7e243358df83/variables" for 127.0.0.1 at 2017-08-14 21:18:37 -0300
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:19:07 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (0.3ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (17.0ms)
+Completed 200 OK in 69ms (Views: 51.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:21:13 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (2.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:22:53 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (5.0ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (3.0ms)
+Completed 200 OK in 74ms (Views: 64.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:26:22 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (1.3ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (3.2ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:30:21 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (3.3ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:31:49 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (2.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.4ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:34:20 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (24.2ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (3.8ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:36:32 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (14.4ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (4.8ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:39:29 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (5.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:41:58 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (4.0ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:42:43 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (21.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:45:36 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (38.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:47:52 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (5.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.5ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:48:23 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (6.5ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (3.5ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:49:11 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (5.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (1.8ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 21:50:29 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (5.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 22:06:12 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (13.5ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (13.3ms)
+Completed 200 OK in 74ms (Views: 54.9ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/site/profile/ads/20" for 127.0.0.1 at 2017-08-14 22:06:33 -0300
+Processing by Site::Profile::AdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6a8omfKxb/12WsXgWJzyfQcdz91w6XZVv8QLzHvx7N30aVATOV1S6OL23gAJglXDhWw0Hhi84ez2LW+B0NhX0Q==", "ad"=>{"title"=>"Iusto labore enim cum.", "category_id"=>"1", "price"=>"312,79", "description"=>"Ótimo jogo"}, "commit"=>"Atualizar", "id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (19.7ms)[0m  [1m[33mUPDATE "ads" SET "description" = ?, "updated_at" = ? WHERE "ads"."id" = ?[0m  [["description", "Ótimo jogo"], ["updated_at", "2017-08-15 01:06:33.542570"], ["id", 20]]
+  [1m[35m (249.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/site/profile/ads
+Completed 302 Found in 284ms (ActiveRecord: 269.6ms)
+
+
+Started GET "/site/profile/ads" for 127.0.0.1 at 2017-08-14 22:06:33 -0300
+Processing by Site::Profile::AdsController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site/profile/ads/index.html.erb within layouts/profile
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."member_id" = 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered site/profile/ads/index.html.erb within layouts/profile (17.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 61ms (Views: 54.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/site/profile/ads/20/edit" for 127.0.0.1 at 2017-08-14 22:06:49 -0300
+Processing by Site::Profile::AdsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT  "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering site/profile/ads/edit.html.erb within layouts/profile
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered site/profile/ads/edit.html.erb within layouts/profile (8.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/site_shared/_navigation.html.erb (2.0ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
