@@ -1,6 +1,5 @@
 //= require bootbox
 //= require bootstrap_sb_admin_base_v2
-//= require notifyjs
 
 /* Sobrescreve data-confirm do Rails */
 $.rails.allowAction = function(element) {
