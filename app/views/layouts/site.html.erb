@@ -13,8 +13,8 @@
 
 	<%= csrf_meta_tags %>
 
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-	<%= stylesheet_link_tag    'site', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= stylesheet_link_tag    'site', media: 'all' %>
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,8 +30,8 @@
 	<%= yield %>
 	<%= render partial: "layouts/site_shared/footer" %>
 
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'site', 'data-turbolinks-track': 'reload' %> 
+	<%= javascript_include_tag 'application' %>
+	<%= javascript_include_tag 'site' %> 
 </body>
 
 </html>
