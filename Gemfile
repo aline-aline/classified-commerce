@@ -32,10 +32,12 @@ gem 'jquery-ui-rails'
 source 'https://rails-assets.org' do
   # Boostrap
   gem 'rails-assets-bootstrap', '3.3.7'
-  # NotifyJS
-  gem 'rails-assets-notifyjs'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
   # BootboxJS
   gem 'rails-assets-bootbox'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
 end
 
 gem 'jquery-rails'
