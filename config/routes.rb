@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       resources :dashboard, only: [:index]
       resources :ads, only: [:index, :edit, :update, :new, :create]
     end
+
+    resources :ad_details, only: [:show] 
   end
 
   devise_for :admins, :skip => [:registrations]
