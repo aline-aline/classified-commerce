@@ -28,6 +28,8 @@ gem 'money-rails'
 gem 'paperclip', '~> 5.0.0'
 # jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
+# The safe Markdown parser, reloaded.
+gem 'redcarpet'
 
 source 'https://rails-assets.org' do
   # Boostrap
@@ -79,6 +81,8 @@ group :development do
   gem 'mailcatcher'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  # Markdown Lorem Ipsum generator
+  gem 'doctor_ipsum'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
