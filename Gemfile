@@ -40,6 +40,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # Animate CSS
   gem 'rails-assets-animate-css'
+  # Bootstrap plugin for markdown editing
+  gem 'rails-assets-bootstrap-markdown'
+  # Marked
+  gem 'rails-assets-marked'
 end
 
 gem 'jquery-rails'
