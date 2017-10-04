@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
 
     resources :ad_details, only: [:show] 
+    resources :categories, only: [:show]
   end
 
   devise_for :admins, :skip => [:registrations]
