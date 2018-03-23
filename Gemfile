@@ -23,7 +23,7 @@ gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
 # Integration of RubyMoney - Money with Rails
-gem 'money-rails'
+gem 'money-rails', '~>1'
 # Easy file attachment management for ActiveRecord
 gem 'paperclip', '~> 5.0.0'
 # jQuery UI for the Rails asset pipeline
@@ -32,6 +32,10 @@ gem 'jquery-ui-rails'
 gem 'redcarpet'
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord.
 gem 'friendly_id'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Translations for the kaminari gem
+gem 'kaminari-i18n'
 
 source 'https://rails-assets.org' do
   # Boostrap

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   namespace :site do
     get 'home', to: 'home#index'
+    get 'search', to: 'search#ads'
 
     namespace :profile do
       resources :dashboard, only: [:index]
