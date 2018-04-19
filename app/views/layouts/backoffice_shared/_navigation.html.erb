@@ -53,14 +53,21 @@
 			</li>
 			<li>
 				<%= link_to backoffice_categories_path do %>
-					<i class="fa fa-th-list fa-fw"></i> Categories</a>
+					<i class="fa fa-th-list fa-fw"></i> Categories
 				<% end %>
 			</li>
 			<li>
 				<%= link_to backoffice_admins_path do %>
-					<i class="fa fa-users fa-fw"></i> Administrators</a>
+					<i class="fa fa-users fa-fw"></i> Administrators
 				<% end %>
 			</li>
+      <% if Rails.env.development? %>
+        <li>
+          <%= link_to backoffice_diagrams_path do %>
+            <i class="fa fa-database fa-fw"></i> ER Diagram
+          <% end %>
+        </li>
+      <% end %>
 		</ul>
 	</div>
 	<!-- /.sidebar-collapse -->
