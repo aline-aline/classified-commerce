@@ -1,5 +1,6 @@
 class Ad < ActiveRecord::Base
-  
+  # Constants
+  QTT_PER_PAGE = 6
   # Callbacks
   before_save :md_to_html
 
@@ -13,12 +14,12 @@ class Ad < ActiveRecord::Base
   validates :price, numericality: { greater_than: 0 }
 
   # Scopes
-  scope :descending_order, ->(quantity = 10, page = 1) {
-    limit(quantity).order(created_at: :desc).page(page).per(6) 
+  scope :descending_order, ->(page) {
+    order(created_at: :desc).page(page).per(QTT_PER_PAGE) 
   }
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id) { where(category: :id) }
-  scope :search, ->(term, page = 1) {
+  scope :search, ->(term, page) {
     where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(9) 
   }
 
@@ -31,23 +32,23 @@ class Ad < ActiveRecord::Base
 
   private
 
-    def md_to_html
-      options = {
-        filter_html: true,
-        link_attributes: {
-          rel: "nofollow",
-          target: "_blank"
-        }
+  def md_to_html
+    options = {
+      filter_html: true,
+      link_attributes: {
+        rel: "nofollow",
+        target: "_blank"
       }
+    }
 
-      extensions = {
-        space_after_headers: true,
-        autolink: true
-      }
+    extensions = {
+      space_after_headers: true,
+      autolink: true
+    }
 
-      renderer = Redcarpet::Render::HTML.new(options)
-      markdown = Redcarpet::Markdown.new(renderer, extensions)
+    renderer = Redcarpet::Render::HTML.new(options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
 
-      self.description = markdown.render(self.description_md)
-    end
+    self.description = markdown.render(self.description_md)
+  end
 end
